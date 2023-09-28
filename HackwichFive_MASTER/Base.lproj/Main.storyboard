@@ -88,11 +88,11 @@
             </objects>
             <point key="canvasLocation" x="-632" y="35"/>
         </scene>
-        <!--Item 1-->
+        <!--Fave Foods-->
         <scene sceneID="ORb-4E-Ejh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tiw-3m-7tK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ckm-IN-3eU"/>
+                    <tabBarItem key="tabBarItem" title="Fave Foods" image="heart.rectangle.fill" catalog="system" id="ckm-IN-3eU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4w-GI-1NM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -128,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
