@@ -8,21 +8,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="j9V-Vb-aWu">
             <objects>
-                <viewController id="Q6Y-K3-0nc" sceneMemberID="viewController">
+                <viewController id="Q6Y-K3-0nc" customClass="secondViewController" customModule="HackwichFive_MASTER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JX3-Z4-IjW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-Uj-mf4">
+                                <rect key="frame" x="20" y="136" width="374" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmY-gg-7RW">
+                                <rect key="frame" x="20" y="300" width="374" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-Dw-jsK">
+                                <rect key="frame" x="108" y="591" width="199" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="See My Favorite Food Shows" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="favoriteShowsButtonPressed:" destination="Q6Y-K3-0nc" eventType="touchUpInside" id="2gO-74-rgJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MtR-A4-Glp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="xf7-9a-pbK"/>
+                    <connections>
+                        <outlet property="bottomLabel" destination="SmY-gg-7RW" id="uCt-dJ-7As"/>
+                        <outlet property="buttonLabel" destination="yaw-Dw-jsK" id="9tf-9x-MFH"/>
+                        <outlet property="topLabel" destination="Pwy-Uj-mf4" id="Nye-jI-KU5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="522-SW-JYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002.8985507246377" y="422.54464285714283"/>
+            <point key="canvasLocation" x="1166.6666666666667" y="422.54464285714283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0iy-Uk-gtm">
@@ -35,14 +66,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUz-1r-VZp">
                                 <rect key="frame" x="20" y="207" width="374" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-QE-Sl8">
                                 <rect key="frame" x="20" y="363" width="374" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -53,7 +84,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="See My Favorite Foods"/>
                                 <connections>
-                                    <action selector="myFavoriteFoodButtonPressed:" destination="Fht-YL-rvb" eventType="touchUpInside" id="7Xw-o7-GXm"/>
+                                    <action selector="myFavoriteFoodButtonPressed:" destination="Fht-YL-rvb" eventType="touchUpInside" id="Ak7-SE-3hM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,6 +94,7 @@
                     <navigationItem key="navigationItem" id="Syb-7V-Etx"/>
                     <connections>
                         <outlet property="bottomLabel" destination="fdT-QE-Sl8" id="rLR-Pe-DnI"/>
+                        <outlet property="buttonLabel" destination="YFX-Fe-VAI" id="HJn-Lh-nDh"/>
                         <outlet property="topLabel" destination="IUz-1r-VZp" id="zoF-mO-tpt"/>
                     </connections>
                 </viewController>
@@ -107,11 +139,11 @@
             </objects>
             <point key="canvasLocation" x="257.97101449275362" y="-268.52678571428572"/>
         </scene>
-        <!--Item 2-->
+        <!--Fave Food Shows-->
         <scene sceneID="eZS-sb-4xn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rKf-xs-hQm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="F3i-Iu-bbm"/>
+                    <tabBarItem key="tabBarItem" title="Fave Food Shows" image="play.tv.fill" catalog="system" id="F3i-Iu-bbm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SmV-76-AdZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -129,8 +161,12 @@
     </scenes>
     <resources>
         <image name="heart.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="play.tv.fill" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
